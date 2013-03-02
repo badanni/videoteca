@@ -31,7 +31,7 @@
             <li>
                 <a href="#">Contacto<span class="arrow2"></span></a>
                 <ul>
-                    <li><a href="http://www.twitter.com/dannyvascneze">Follow us on Twitter</a></li>
+                    <li><a href="http://www.twitter.com/dannyvasconeze">Follow us on Twitter</a></li>
                     <li><a href="http://www.facebook.com/danny.vasconez">Facebook</a></li>
                     <li><a href="mailto:info@robotica-ecuador.com">e-mail</a></li>
                 </ul>

@@ -14,7 +14,13 @@ ini_set('max_execution_time', 0);
 ?>
 <script type="text/javascript">
 	$(document).ready(function(){
-	$("#info").hide(1000);
+	$("#info").hide();
+	$("#info").show(10000);
+	$("#subido").hide();
+});
+function envio(){
+	$("#formulario").hide(1000);
+	$("#subido").show();
 }
 </script>
 <?
@@ -96,9 +102,9 @@ if ($tipo!="1"){
 		?>
 	 </SELECT><br>
 	 <label>Descripcion</label><textarea name="descripcion" cols="40" rows="8" id="descripcion"></textarea><br>
-      <input name="boton" type="submit" id="boton" value="Enviar" />
+      <input name="boton" type="submit" id="boton" value="Enviar" onclick="javascript:envio()"/>
      </form>
-     
+     <br>
   </div>
   <?
   goto fin;
@@ -113,8 +119,9 @@ fin:
 $db = null;
 ?>
 <div id="info">
-<h5>IMPORTANTE: El fichero no debe contener espacios ni caracteres especiales, solo formato MP4 <br>
+<h3>IMPORTANTE: El fichero no debe contener espacios ni caracteres especiales, solo formato MP4/WEBM. 
 <?
-echo "El tamano maximo de todo es ".ini_get('post_max_size')." y por archivo es ".ini_get('upload_max_filesize')."</h5>";
+echo "El tamano maximo de todo es ".ini_get('post_max_size')." y por archivo es ".ini_get('upload_max_filesize')."</h3>";
 ?>
 </div>
+<div id="subido">Subiendo archivo...</div>
